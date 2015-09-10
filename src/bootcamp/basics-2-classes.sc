@@ -1,4 +1,8 @@
-class MyClass(argument1: Int, argument2: String) {
+abstract class MyParentClass {
+  def stringRepresentation: String
+}
+
+class MyClass(argument1: Int, argument2: String) extends MyParentClass {
   val myField = 1 //public field
 
   private[bootcamp] val packagePrivateField = 2 //can be accessed from within bootcamp
@@ -14,7 +18,8 @@ class MyClass(argument1: Int, argument2: String) {
     number1 - number2
   }
 
-  override def toString: String = s"${argument1} and ${argument2}"
+  //overriding a super class method
+  override def stringRepresentation: String = s"${argument1} and ${argument2}"
 }
 
 val myClass = new MyClass(123, "Some String")
