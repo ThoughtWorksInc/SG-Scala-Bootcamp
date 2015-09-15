@@ -1,6 +1,6 @@
 //Traits are similar to Java Interface but can be partially implemented
 trait Comparable {
-  def compareTo(other: Comparable): Int
+  def compareTo(other: Comparable): Int = 2
   def isTheSame(other: Comparable) = compareTo(other) == 0
 }
 
@@ -17,3 +17,5 @@ class Centipede(val numberOfLegs:Int) extends Comparable {
 val myCentipede = new Centipede(3)
 val otherCentipede = new Centipede(4)
 myCentipede.isTheSame(otherCentipede) //returns false
+
+val myComparable = new Comparable {}
