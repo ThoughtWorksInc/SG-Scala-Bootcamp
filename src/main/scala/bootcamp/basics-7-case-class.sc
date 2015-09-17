@@ -5,5 +5,5 @@ case class Admin(name: String, staffId: String) extends User
 case class Lecturer(name: String, staffId: String, faculty: String) extends User
 
 val student = Student("Joe Blog", "stu-1234") //don't need the new keyword
-val admin = Student("John Smith", "sta-1234")
-val lecturer = Lecturer("Jim Walker", "sta-1235", "Social Sciences")
+val admin = Admin("John Smith", "sta-1234")
+val lecturer = Lecturer("Colin Tripp", "sta-1235", "Mathematical Sciences")

@@ -13,7 +13,6 @@ class Cat(override val name: String) extends Animal(name)
 class Dog(override val name: String) extends Animal(name)
 
 def myAnimal(animalType: String, name: String) = {
-  //Calling code, note how we construct the animal... this is the result of using apply
   val myAnimal = Animal(animalType, name)
   myAnimal match {
     case Some(animal) => s"An animal called ${animal.name} was created"
