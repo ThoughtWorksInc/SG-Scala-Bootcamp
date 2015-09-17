@@ -14,10 +14,12 @@ class Cat(override val name: String) extends Animal(name)
 class Dog(override val name: String) extends Animal(name)
 
 //Calling code, note how we construct the animal... this is the result of using apply
-val cat = Animal("cat", "Felix")
-cat.isDefined //true
+val maybeCat: Option[Animal] = Animal("cat", "Felix")
+maybeCat.isDefined //true
+val cat = maybeCat.get
 
 val unknownAnimal = Animal("Car", "Lightning McQueen")
 unknownAnimal.isEmpty //true
 unknownAnimal.isDefined //false
 unknownAnimal.get //will throw NoSuchElementException
+

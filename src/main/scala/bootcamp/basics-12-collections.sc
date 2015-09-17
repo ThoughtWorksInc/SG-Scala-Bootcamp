@@ -1,3 +1,6 @@
+
+import java.util
+
 import scala.collection.immutable
 
 val imap = immutable.Map("John" -> 18)
@@ -10,3 +13,11 @@ import scala.collection.mutable
 val mmap = mutable.Map("Dave" -> 21)
 mmap.update("Dave", 22)
 mmap("Dave")
+
+
+import scala.collection.convert._
+
+val javaList: util.ArrayList[String] = {"a", "b", "c"}
+
+
+javaList.get(1)
