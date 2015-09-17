@@ -17,5 +17,3 @@ class Centipede(val numberOfLegs:Int) extends Comparable {
 val myCentipede = new Centipede(3)
 val otherCentipede = new Centipede(4)
 myCentipede.isTheSame(otherCentipede) //returns false
-
-val myComparable = new Comparable {}
