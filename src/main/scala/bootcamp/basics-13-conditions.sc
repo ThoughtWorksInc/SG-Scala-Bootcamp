@@ -23,3 +23,5 @@ def isEvenMultipleOfThree(x: Int): Boolean = {
     return false
   }
 }
+
+//excercise
