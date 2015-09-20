@@ -14,7 +14,7 @@ def isEvenNumber(x: Int): Boolean = {
 }
 
 //nested if/else
-def isEvenMultipleOfThree(x: Int): Boolean = {
+def isEvenMultiplesOfThree(x: Int): Boolean = {
   if(x%2==0) {
     if(x%3==0) return true
     else return false
@@ -23,5 +23,3 @@ def isEvenMultipleOfThree(x: Int): Boolean = {
     return false
   }
 }
-
-//excercise

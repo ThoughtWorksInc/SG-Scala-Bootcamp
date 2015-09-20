@@ -15,7 +15,7 @@ for(letter <- letters) {
 }
 
 //for loop with filters
-for(i <- (1 to 10) if i %2 == 0) {
+for(i <- (1 to 10) if i%2 == 0) {
   println(i) //prints even numbers
 }
 
@@ -24,7 +24,17 @@ for(i <- (2 to 10 by 2)) {
   println(i) //prints even numbers
 }
 
-//for loop with yield (aka for comprehension)
+//for loop with yield (aka for comprehension, syntactic sugar for "map" and "flatmap")
 val evenNumbers = for(i <- (1 to 10) if i % 2 == 0) yield i
 //returns a sequence of even numbers, more on for comprehension later
+//note.. unlike C#, this is NOT lazy... see later
 
+
+val condition = false
+while(condition) {
+  print("doing something")
+}
+
+do {
+  print("doing something else")
+}while(condition)
