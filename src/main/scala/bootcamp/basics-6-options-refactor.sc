@@ -10,7 +10,8 @@ def parseUser1(input: String): User = {
 }
 
 def printUser1(user: User): Unit = {
-  if (user != null) println(user) else println("Invalid User")
+  if (user != null) println(user)
+  else println("Invalid User")
 }
 
 val obi = parseUser1("1 - Obi One")

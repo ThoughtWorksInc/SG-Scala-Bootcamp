@@ -1,6 +1,7 @@
 // Write a recursive function that implements exists
+// returns true if any element passes the truth-test
 
-def exists(l: List[Int], pred: Int => Boolean): Boolean = ???
+def exists(list: List[Int], pred: Int => Boolean): Boolean = ???
 
 
 def isEven(num: Int) = num % 2 == 0
@@ -14,3 +15,4 @@ assert(
 assert(
   !exists(1 :: 3 :: 5 :: Nil, isEven)
 )
+
