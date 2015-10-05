@@ -1,6 +1,7 @@
 //Variable Declarations
 var mutable = "abc" //Mutable, can be reassigned
 mutable = "cde"
+
 val immutable = "abc" //Immutable, cannot be reassigned
 
 //Lazy Val can only be demonstrated in a repl, the worksheet evaluates it straight away.
@@ -13,4 +14,3 @@ val anotherString = "boo hoo hoo"
 
 //Multiple assignments:
 val (value1, value2) = ("some string", 123)
-

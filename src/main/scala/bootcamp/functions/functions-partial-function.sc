@@ -1,25 +1,43 @@
 case class Req(url: String)
-case class Res(status: Int, body: String)
+case class Res(body: String, status: Int = 200)
 
 type Controller = PartialFunction[Req, Res]
 
-def userController: Controller = {
-  case Req("/user") => Res(200, "Hello intrepid user")
+val homeController: Controller = {
+  case Req("/home") => Res("Welcome to Scala boot camp!")
 }
 
-def articleController: Controller = {
-  case Req("/article") => Res(200, "Scala takes over the world")
+val userController: Controller = new PartialFunction[Req, Res] {
+  override def isDefinedAt(req: Req): Boolean =
+    req.url.startsWith("/users")
+
+  override def apply(req: Req): Res = {
+    val name = req.url.stripPrefix("/user/")
+    Res(s"Hello $name")
+  }
 }
 
-def notFoundController: Controller = {
-  case _ => Res(404, "This is not the page you were looking for")
+val articleController: Controller = Map(
+  Req("/articles/scala") -> Res("Scala is taking over the world!"),
+  Req("/articles/java") -> Res("Java attempts to stay relevant with lambdas")
+)
+
+val notFoundController: Controller = {
+  case _ => Res("This is not the page you were looking for", 404)
 }
 
 val appController: Controller =
-  userController orElse articleController orElse notFoundController
+  homeController orElse
+    userController orElse
+    articleController orElse
+    notFoundController
 
-val userReq = Req("/user")
-val hackReq = Req("/trying/to/find/backdoor")
+appController(Req("/users/fun"))
+appController(Req("/articles/scala"))
+appController(Req("/articles/java-is-good"))
 
-appController(userReq)
-appController(hackReq)
+//translate to normal function with options with "lift"
+
+val normalFunction: Req => Option[Res] =
+  articleController.lift
+
