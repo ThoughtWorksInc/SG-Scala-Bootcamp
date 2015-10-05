@@ -1,5 +1,5 @@
 
-def map(l: List[Int], transform: Int => Int): List[Int] = ???
+def map(list: List[Int], transform: Int => Int): List[Int] = ???
 
 def double(num: Int) = num * 2
 

@@ -1,5 +1,4 @@
-import scala.collection.Seq
-def reduce(l: List[Int], reducer: (Int, Int) => Int): Int = ???
+def reduce(list: List[Int], reducer: (Int, Int) => Int): Int = ???
 
 def max(a: Int, b: Int) =
   if (a > b) a
