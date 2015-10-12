@@ -77,9 +77,8 @@ assert(Distance(12, Inch).toStandard - Distance(1, Foot).toStandard < 1e-10)
 assert(Time(30.0, Second) < Time(1, Minute))
 
 //*** Use the type system to prevent different measures (time and distance) from being compared
-
-
 //*** SHOULD NOT COMPILE:
+
 //Distance(1.0, Metre) < Time(1.0, Second)
 
 //*** Bonus points - use the "pimp my library pattern"
