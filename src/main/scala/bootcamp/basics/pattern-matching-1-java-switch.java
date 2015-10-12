@@ -1,4 +1,4 @@
-package bootcamp;
+package main.scala.bootcamp.basics;
 //Pattern matching can be thought of as generalized switch
 class JavaSwitch {
     public String doSomething(int number) {
