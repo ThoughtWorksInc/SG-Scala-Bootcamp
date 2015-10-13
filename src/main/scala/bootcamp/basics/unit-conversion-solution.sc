@@ -24,7 +24,7 @@
 
 abstract class Unit[T](val scale: Double)
 
-abstract class Measure[T] extends Ordered[Measure[T]] {
+trait Measure[T] extends Ordered[Measure[T]] {
   def value: Double
   def unit: Unit[T]
 
