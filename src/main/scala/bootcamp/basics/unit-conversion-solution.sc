@@ -42,24 +42,11 @@ object Kilometre extends Unit[Distance](1000.0)
 object Inch extends Unit[Distance](0.0254)
 object Foot extends Unit[Distance](0.3048)
 
-implicit class DistanceSugar(value: Double) {
-  def metre = Distance(value, Metre)
-  def kilometre = Distance(value, Kilometre)
-  def inch = Distance(value, Inch)
-  def foot = Distance(value, Foot)
-}
-
 case class Time(value: Double, unit: Unit[Time]) extends Measure[Time]
 
 object Second extends Unit[Time](1.0)
 object Minute extends Unit[Time](60.0)
 object Hour extends Unit[Time](3600)
-
-implicit class TimeSugar(value: Double) {
-  def second = Time(value, Second)
-  def minute = Time(value, Minute)
-  def hour = Time(value, Hour)
-}
 
 //*** Work through by uncommenting each test line by line...
 //*** Design objects, classes and traits to give a DSL
@@ -81,7 +68,4 @@ assert(Time(30.0, Second) < Time(1, Minute))
 
 //Distance(1.0, Metre) < Time(1.0, Second)
 
-//*** Bonus points - use the "pimp my library pattern"
-
-assert(2000.0.metre > 1.0.kilometre)
 

@@ -19,7 +19,3 @@
 //*** SHOULD NOT COMPILE:
 //Distance(1.0, Metre) < Time(1.0, Second)
 
-//*** Bonus points - use the "pimp my library pattern"
-
-//assert(2000.0.metre > 1.0.kilometre)
-
