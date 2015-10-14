@@ -38,3 +38,5 @@ while(condition) {
 do {
   print("doing something else")
 }while(condition)
+
+//Question, can you turn all the for loops into map/flatmap/filter/etc?
