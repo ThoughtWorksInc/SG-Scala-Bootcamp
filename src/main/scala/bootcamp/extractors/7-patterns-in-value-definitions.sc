@@ -11,7 +11,7 @@ object VersionNumber {
   }
 }
 
-val VersionNumber(major, _*) = VersionNumber(1,2,3)
+val VersionNumber(major, _*) = "1.2.3"
 s"My version is ${major}"
 
 val (first, last) = ("John", "Smith")
