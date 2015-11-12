@@ -1,38 +1,40 @@
 package bootcamp.futures
 
-import java.io.File
-
 import scala.concurrent.Future
-import scala.concurrent.ExecutionContext.Implicits.global
 
 /**
- * Created by ravikupin on 11/11/15.
+ * Created by ravikupin on 12/11/15.
  */
-
-//Get count of all words in a directory
-
 object practical_compose_2 extends App{
 
-  /** WordCount represents number of words in a given file
-   *
-   */
-  type WordCount = (String, Int)
-
-  /** returns all the file names in a given directory
-   *
-   * @param directory
+  /**
+   * double_value function sleeps randomly between 0-5 seconds before returning double
+   * the value
+   * @param x
    * @return
    */
-  def files_in_directory(directory: String):Future[Seq[String]] = ???
+  def double_value(x: Int):Future[Int] = ???
 
-  /** this method returns one future for each file in files
+  /**
+   * converts the list of futures to one future, reason being so that user can wait on only
+   * one future irrespective of many futures
    *
-   * @param files
+   * @param listOfFutures
    * @return
    */
-  def total_word_count_for_files_internal(files: Seq[String]):Seq[Future[WordCount]] = ???
-  
-  
-  def total_word_count_for_each_file_in_directory(directory: String): Future[Seq[WordCount]] = ???
-  
+  def convert(listOfFutures: List[Future[Int]]): Future[List[(Int, Int)]] = ???
+
+  /**
+   * seed needs to converted to
+   */
+  val seed = (1 to 10)
+
+  /**
+   * fill in the ouput after doubling, make use of double_value method
+   */
+
+  val actual: List[Int] = Nil
+
+  val expected = (1 to 10) map (_ * 2)
+  assert(expected == actual, "not matching")
 }

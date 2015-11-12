@@ -27,6 +27,7 @@ object simple_future_0 extends App {
 
   val result = Await.result(value_at_some_point, 5 seconds)
   println(s"value from future '$result'")
+
 }
 
 

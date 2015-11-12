@@ -30,7 +30,7 @@ object simple_compose_with_timout_1 extends App {
   }
  }
 
- val searchFuture: Future[List[String]] = Future sequence taskFutures
+ val searchFuture = Future sequence taskFutures
 
  println("Blocking for results")
  val result = Await result (searchFuture, timeout * tasks.length)
