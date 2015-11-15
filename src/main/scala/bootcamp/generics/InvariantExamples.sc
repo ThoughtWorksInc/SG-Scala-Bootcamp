@@ -11,4 +11,4 @@ class Box[T <: Fruit](var content: T) {
 
 val box = new Box[Apple](new Apple)
 box.put(new Apple)
-box.put(new Orange)
+//box.put(new Orange)

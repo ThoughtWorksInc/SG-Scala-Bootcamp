@@ -16,4 +16,4 @@ class UnsafeBox(content: Fruit) {
   def get(): Fruit = content
 }
 
-val orange2: Orange = new UnsafeBox(new Orange()).get()
+//val orange2: Orange = new UnsafeBox(new Orange()).get()

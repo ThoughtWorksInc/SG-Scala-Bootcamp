@@ -13,4 +13,4 @@ def getType[A : TypeTag](xs: List[A]) = typeOf[A].erasure.toString
 
 getType(List("a", "b", "c"))
 getType(List(1,2,3))
-getType(List(1,2,3))(typeTag[Int])
+//getType(List(1,2,3))(typeTag[Int])
