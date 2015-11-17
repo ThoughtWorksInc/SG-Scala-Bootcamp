@@ -1,9 +1,10 @@
 package bootcamp.futures
 
 import java.time.LocalDateTime
-import scala.concurrent.{Await, Future}
+
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
+import scala.concurrent.{Await, Future}
 
 /**
  * Created by ravikupin on 9/11/15.
@@ -27,7 +28,4 @@ object simple_future_0 extends App {
 
   val result = Await.result(value_at_some_point, 5 seconds)
   println(s"value from future '$result'")
-
 }
-
-
